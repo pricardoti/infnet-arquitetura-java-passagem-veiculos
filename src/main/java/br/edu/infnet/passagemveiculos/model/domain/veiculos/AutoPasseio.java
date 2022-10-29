@@ -16,7 +16,7 @@ public class AutoPasseio extends Veiculo {
     public String toString() {
         return "AutoPasseio["
                 + super.toString()
-                + "categoria='" + categoria
+                + ", categoria=" + categoria
                 + "]";
     }
 }

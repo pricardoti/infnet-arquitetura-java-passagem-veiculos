@@ -1,11 +1,14 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
+import java.time.LocalDate;
+
 public abstract class Veiculo {
 
     private String placa;
     private String fabricante;
     private String modelo;
     private String motor;
+    private Long ano;
 
     public String getPlaca() {
         return placa;
@@ -39,11 +42,20 @@ public abstract class Veiculo {
         this.motor = motor;
     }
 
+    public Long getAno() {
+        return ano;
+    }
+
+    public void setAno(Long ano) {
+        this.ano = ano;
+    }
+
     @Override
     public String toString() {
-        return "placa='" + placa +
-                ", fabricante='" + fabricante +
-                ", modelo='" + modelo +
-                ", motor='" + motor;
+        return "placa=" + placa +
+                ", fabricante=" + fabricante +
+                ", modelo=" + modelo +
+                ", motor=" + motor +
+                ", ano=" + ano;
     }
 }

@@ -1,1 +1,6 @@
-# infnet-arquitetura-java-passagem-veiculos
+# Infnet Arquitetura Java - Passagem Veiculos
+
+Executando a aplicação via CLI:
+```Windows
+./mvnw spring-boot:run
+```

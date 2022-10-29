@@ -14,9 +14,9 @@ public class Transporte extends Veiculo {
 
     @Override
     public String toString() {
-        return "AutoPasseio["
+        return "Transporte["
                 + super.toString()
-                + "quantidadePassageiros='" + quantidadePassageiros
+                + ", quantidadePassageiros=" + quantidadePassageiros
                 + "]";
     }
 }

@@ -14,9 +14,9 @@ public class Carga extends Veiculo {
 
     @Override
     public String toString() {
-        return "AutoPasseio["
+        return "Carga["
                 + super.toString()
-                + "carroceria='" + carroceria
+                + ", carroceria=" + carroceria
                 + "]";
     }
 }
