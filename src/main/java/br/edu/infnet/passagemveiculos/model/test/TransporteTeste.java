@@ -1,4 +1,4 @@
-package br.edu.infnet.passagemveiculos.runners;
+package br.edu.infnet.passagemveiculos.model.test;
 
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.Transporte;
 import org.springframework.boot.ApplicationArguments;
