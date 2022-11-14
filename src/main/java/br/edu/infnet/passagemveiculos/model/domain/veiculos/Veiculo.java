@@ -1,7 +1,5 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
-import java.time.LocalDate;
-
 public abstract class Veiculo {
 
     private String placa;
