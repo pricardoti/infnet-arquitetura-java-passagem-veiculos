@@ -3,7 +3,7 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>AppPedido</title>
+<title>App Passagens Veiculos</title>
 </head>
 <body>
 	Paulo R G dos Santos
