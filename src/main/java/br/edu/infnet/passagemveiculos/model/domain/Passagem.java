@@ -8,6 +8,7 @@ public class Passagem {
     private String guiche;
     private String operador;
     private LocalDateTime dataHora;
+    private Cliente cliente;
 
     public String getPraca() {
         return praca;
@@ -41,6 +42,14 @@ public class Passagem {
         this.dataHora = dataHora;
     }
 
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
+    }
+
     @Override
     public String toString() {
         return "Passagem[" +
@@ -48,6 +57,7 @@ public class Passagem {
                 ", guiche='" + guiche +
                 ", operador='" + operador +
                 ", dataHora=" + dataHora +
+                ", cliente=" + cliente +
                 ']';
     }
 }
