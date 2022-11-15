@@ -4,10 +4,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class AutoPasseioController {
+public class PasseioController {
 
-    @GetMapping(value = "/auto-passeio/lista")
+    @GetMapping(value = "/veiculos/passeio/lista")
     public String telaLista() {
-        return "/autopasseio/lista";
+        return "/veiculos/passeio/lista";
     }
 }

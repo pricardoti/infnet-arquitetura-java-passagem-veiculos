@@ -14,7 +14,7 @@ public class CargaTeste implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println();
-        System.out.println("..:: Runner Carga ::..");
+        System.out.println("..:: Runner Veiculo de Carga ::..");
 
         Carga caminhao1 = new Carga();
         caminhao1.setPlaca("AAA-1111");

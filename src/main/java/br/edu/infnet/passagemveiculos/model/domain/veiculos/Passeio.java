@@ -1,6 +1,6 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
-public class AutoPasseio extends Veiculo {
+public class Passeio extends Veiculo {
 
     private CategoriaEnum categoria;
 
@@ -14,7 +14,7 @@ public class AutoPasseio extends Veiculo {
 
     @Override
     public String toString() {
-        return "AutoPasseio["
+        return "Passeio["
                 + super.toString()
                 + ", categoria=" + categoria
                 + "]";

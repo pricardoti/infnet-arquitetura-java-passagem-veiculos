@@ -14,16 +14,16 @@
       <div class="container-fluid">
         <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link active" href="/cliente/lista">Cliente</a>
+                <a class="nav-link active" href="/passagem/lista">Passagem</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link active" href="/passagem/lista">Passagem</a>
+                <a class="nav-link active" href="/cliente/lista">Cliente</a>
             </li>
             <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Veiculos</a>
             <ul class="dropdown-menu">
-               <li><a class="dropdown-item" href="/auto-passeio/lista">Auto Passeio</a></li>
-               <li><a class="dropdown-item" href="/carga/lista">Carga</a></li>
-               <li><a class="dropdown-item" href="/transporte/lista">Transporte</a></li>
+               <li><a class="dropdown-item" href="/veiculos/passeio/lista">Passeio</a></li>
+               <li><a class="dropdown-item" href="/veiculos/carga/lista">Carga</a></li>
+               <li><a class="dropdown-item" href="/veiculos/transporte/lista">Transporte</a></li>
             </ul>
         </ul>
       </div>

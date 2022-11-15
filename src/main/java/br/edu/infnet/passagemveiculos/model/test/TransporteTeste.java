@@ -11,7 +11,7 @@ public class TransporteTeste implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         System.out.println();
-        System.out.println("..:: Runner Transporte ::..");
+        System.out.println("..:: Runner Veiculo de Transporte ::..");
 
         Transporte onibus1 = new Transporte();
         onibus1.setPlaca("TTT-0001");

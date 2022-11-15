@@ -15,7 +15,7 @@ public class VeiculoTeste implements ApplicationRunner {
         System.out.println();
         System.out.println("..:: Runner Veiculos ::..");
 
-        AutoPasseio autoPasseio = new AutoPasseio();
+        Passeio autoPasseio = new Passeio();
         autoPasseio.setPlaca("AAA-0001");
         autoPasseio.setFabricante("Volkswagen");
         autoPasseio.setModelo("T-Cross");

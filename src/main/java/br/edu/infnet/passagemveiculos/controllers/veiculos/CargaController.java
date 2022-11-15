@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class CargaController {
 
-    @GetMapping(value = "/carga/lista")
+    @GetMapping(value = "/veiculos/carga/lista")
     public String telaLista() {
-        return "/carga/lista";
+        return "/veiculos/carga/lista";
     }
 }
