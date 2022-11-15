@@ -43,14 +43,6 @@ public class Passagem {
         this.operador = operador;
     }
 
-    public LocalDateTime getDataHora() {
-        return dataHora;
-    }
-
-    public void setDataHora(LocalDateTime dataHora) {
-        this.dataHora = dataHora;
-    }
-
     public Cliente getCliente() {
         return cliente;
     }
