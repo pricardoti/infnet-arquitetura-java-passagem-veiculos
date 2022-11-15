@@ -10,10 +10,25 @@
 </head>
 <body>
     <div class="container mt-3">
-      <h3>Cliente</h3>
+      <h2>Clientes: ${clientes.size()}</h2>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Cpf/Cnpj</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody>
+           <c:forEach var="c" items="${clientes}">
+                <tr>
+                  <td>${c.nome}</td>
+                  <td>${c.cpfCnpj}</td>
+                  <td>${c.email}</td>
+                </tr>
+          </c:forEach>
+        </tbody>
+      </table>
     </div>
-    <c:forEach var="c" items="${clientes}">
-        ${c.nome}
-    </c:forEach>
 </body>
 </html>
