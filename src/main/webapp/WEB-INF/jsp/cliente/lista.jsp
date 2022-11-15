@@ -11,9 +11,11 @@
 <body>
     <div class="container mt-3">
       <h2>Clientes: ${clientes.size()}</h2>
+      <h4><a href="/cliente/incluir" class="btn btn-success">Novo Cliente</a></h4>
       <table class="table table-striped">
         <thead>
           <tr>
+            <th>Id</th>
             <th>Nome</th>
             <th>Cpf/Cnpj</th>
             <th>Email</th>
@@ -22,9 +24,11 @@
         <tbody>
            <c:forEach var="c" items="${clientes}">
                 <tr>
+                  <td>${c.id}</td>
                   <td>${c.nome}</td>
                   <td>${c.cpfCnpj}</td>
                   <td>${c.email}</td>
+                  <td><a href="/cliente/${c.id}/excluir" class="btn btn-warning">excluir</a></td>
                 </tr>
           </c:forEach>
         </tbody>
