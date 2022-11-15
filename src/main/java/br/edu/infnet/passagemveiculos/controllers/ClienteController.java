@@ -20,7 +20,7 @@ public class ClienteController {
 
     @GetMapping(value = "/cliente/incluir")
     public String incluir() {
-        return "cliente/incluir";
+        return "cliente/cadastro";
     }
 
     @PostMapping(value = "/cliente/incluir")
@@ -36,7 +36,7 @@ public class ClienteController {
     }
 
     @GetMapping(value = "/cliente/{id_cliente}/excluir")
-    public String excluir(@PathVariable Integer id) {
+    public String excluir(@PathVariable("id_cliente") Integer id) {
         clienteService.excluir(id);
         return "redirect:/cliente/lista";
     }
