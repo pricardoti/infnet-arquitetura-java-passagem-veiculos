@@ -43,14 +43,6 @@ public class Passagem {
         this.operador = operador;
     }
 
-    public Cliente getCliente() {
-        return cliente;
-    }
-
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
-    }
-
     @Override
     public String toString() {
         return "Passagem[" +

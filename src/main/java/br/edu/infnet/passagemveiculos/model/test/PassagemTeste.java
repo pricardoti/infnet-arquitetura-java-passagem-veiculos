@@ -29,11 +29,10 @@ public class PassagemTeste implements ApplicationRunner {
         passagem1.setOperador("Joãozinho");
         System.out.println(">>> " + passagem1);
 
-        Passagem passagem2 = new Passagem();
+        Passagem passagem2 = new Passagem(cliente1);
         passagem2.setGuiche("Guichê 02 - Sentido Leste");
         passagem2.setPraca("Litoral Norte SP");
         passagem2.setOperador("Mariazinha");
-        passagem2.setCliente(cliente1);
         System.out.println(">>> " + passagem2);
 
         Cliente cliente2 = new Cliente();
