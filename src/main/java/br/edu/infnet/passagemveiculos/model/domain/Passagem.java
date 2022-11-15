@@ -1,6 +1,9 @@
 package br.edu.infnet.passagemveiculos.model.domain;
 
+import br.edu.infnet.passagemveiculos.model.domain.veiculos.Veiculo;
+
 import java.time.LocalDateTime;
+import java.util.List;
 
 public class Passagem {
 
@@ -9,6 +12,7 @@ public class Passagem {
     private String operador;
     private LocalDateTime dataHora;
     private Cliente cliente;
+    private List<Veiculo> veiculos;
 
     public Passagem() {
         this.dataHora = LocalDateTime.now();
@@ -43,6 +47,14 @@ public class Passagem {
         this.operador = operador;
     }
 
+    public List<Veiculo> getVeiculos() {
+        return veiculos;
+    }
+
+    public void setVeiculos(List<Veiculo> veiculos) {
+        this.veiculos = veiculos;
+    }
+
     @Override
     public String toString() {
         return "Passagem[" +
@@ -51,6 +63,7 @@ public class Passagem {
                 ", operador='" + operador +
                 ", dataHora=" + dataHora +
                 ", cliente=" + cliente +
+                ", veiculos=" + veiculos.size() +
                 ']';
     }
 }
