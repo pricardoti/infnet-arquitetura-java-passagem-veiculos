@@ -10,6 +10,15 @@ public class Passagem {
     private LocalDateTime dataHora;
     private Cliente cliente;
 
+    public Passagem() {
+        this.dataHora = LocalDateTime.now();
+    }
+
+    public Passagem(Cliente cliente) {
+        this();
+        this.cliente = cliente;
+    }
+
     public String getPraca() {
         return praca;
     }
