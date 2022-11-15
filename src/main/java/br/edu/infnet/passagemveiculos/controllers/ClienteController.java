@@ -20,7 +20,7 @@ public class ClienteController {
 
     @GetMapping(value = "/cliente/incluir")
     public String incluir() {
-        return "cliente/incluir";
+        return "cliente/cadastro";
     }
 
     @PostMapping(value = "/cliente/incluir")
