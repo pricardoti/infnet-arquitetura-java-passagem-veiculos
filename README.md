@@ -1,6 +1,7 @@
 # Infnet Arquitetura Java - Passagem Veiculos
 
 ### Arquitetura de Projeto:
+
 ![desenho de arquitetura do projeto](https://github.com/pricardoti/infnet-arquitetura-java-passagem-veiculos/blob/main/img/arquitetura.PNG)
 
 1. A classe principal é ``PASSAGEM``. Uma Passagem tem um ``CLIENTE`` (classe de associação) e um ``VEICULO`` (classe mãe) vinculado a passagem. 
