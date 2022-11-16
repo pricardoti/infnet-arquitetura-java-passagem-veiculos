@@ -39,7 +39,7 @@ public class PassagemTeste implements ApplicationRunner {
         passeio2.setFabricante("Volkswagen");
         passeio2.setModelo("Gol Confortline");
         passeio2.setMotor("1.0");
-        passeio2.setCategoria(CategoriaEnum.PASSEIO);
+        passeio2.setCategoria(CategoriaEnum.HATCH);
         passeio2.setAno(2022L);
 
         Passeio passeio3 = new Passeio();

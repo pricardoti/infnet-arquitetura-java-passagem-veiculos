@@ -1,7 +1,13 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+@Entity
 public class Carga extends Veiculo {
 
+    @Enumerated(EnumType.ORDINAL)
     private CarroceriaEnum carroceria;
 
     public CarroceriaEnum getCarroceria() {

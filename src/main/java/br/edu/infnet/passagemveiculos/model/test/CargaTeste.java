@@ -1,7 +1,6 @@
 package br.edu.infnet.passagemveiculos.model.test;
 
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.Carga;
-import br.edu.infnet.passagemveiculos.model.domain.veiculos.CarroceriaEnum;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;

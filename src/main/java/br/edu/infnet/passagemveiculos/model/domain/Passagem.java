@@ -2,16 +2,26 @@ package br.edu.infnet.passagemveiculos.model.domain;
 
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.Veiculo;
 
+import javax.persistence.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
+@Entity
 public class Passagem {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
     private String praca;
     private String guiche;
     private String operador;
     private LocalDateTime dataHora;
+
+    @OneToOne(cascade = CascadeType.DETACH)
+    @JoinColumn(name = "idCliente")
     private Cliente cliente;
+
+    @OneToMany(cascade = CascadeType.DETACH)
     private List<Veiculo> veiculos;
 
     public Passagem() {
@@ -21,6 +31,14 @@ public class Passagem {
     public Passagem(Cliente cliente) {
         this();
         this.cliente = cliente;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getPraca() {
@@ -58,6 +76,7 @@ public class Passagem {
     @Override
     public String toString() {
         return "Passagem[" +
+                "id='" + id +
                 "praca='" + praca +
                 ", guiche='" + guiche +
                 ", operador='" + operador +
