@@ -1,7 +1,8 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
 public enum CategoriaEnum {
-    PASSEIO,
+    HATCH,
+    SEDAN,
     SUV,
     PICKUP
 }

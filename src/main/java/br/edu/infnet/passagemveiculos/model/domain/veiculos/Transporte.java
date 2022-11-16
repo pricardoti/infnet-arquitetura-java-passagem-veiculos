@@ -1,5 +1,8 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
+import javax.persistence.Entity;
+
+@Entity
 public class Transporte extends Veiculo {
 
     private Long quantidadePassageiros;

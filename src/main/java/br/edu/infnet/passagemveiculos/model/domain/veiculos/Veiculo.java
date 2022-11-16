@@ -1,12 +1,30 @@
 package br.edu.infnet.passagemveiculos.model.domain.veiculos;
 
+import javax.persistence.*;
+
+@Entity
+@Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Veiculo {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(unique = true)
     private String placa;
+
     private String fabricante;
     private String modelo;
     private String motor;
     private Long ano;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getPlaca() {
         return placa;
@@ -50,7 +68,8 @@ public abstract class Veiculo {
 
     @Override
     public String toString() {
-        return "placa=" + placa +
+        return "id=" + id +
+                "placa=" + placa +
                 ", fabricante=" + fabricante +
                 ", modelo=" + modelo +
                 ", motor=" + motor +

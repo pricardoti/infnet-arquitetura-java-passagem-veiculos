@@ -1,7 +1,7 @@
 package br.edu.infnet.passagemveiculos.model.test;
 
-import br.edu.infnet.passagemveiculos.model.domain.veiculos.Passeio;
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.CategoriaEnum;
+import br.edu.infnet.passagemveiculos.model.domain.veiculos.Passeio;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
@@ -28,7 +28,7 @@ public class PasseioTeste implements ApplicationRunner {
         passeio2.setFabricante("Volkswagen");
         passeio2.setModelo("Gol Confortline");
         passeio2.setMotor("1.0");
-        passeio2.setCategoria(CategoriaEnum.PASSEIO);
+        passeio2.setCategoria(CategoriaEnum.HATCH);
         passeio2.setAno(2022L);
         System.out.println(">>> " + passeio2);
 

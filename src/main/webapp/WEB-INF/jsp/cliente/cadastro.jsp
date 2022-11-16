@@ -19,11 +19,11 @@
             <input type="text" class="form-control" placeholder="nome do cliente" name="nome">
         </div>
 	    <div class="mb-3 mt-3">
-            <label class="form-label">cpf ou cnpj:</label>
+            <label class="form-label">Cpf ou Cnpj:</label>
             <input type="text" class="form-control" placeholder="cpf ou cnpj do cliente" name="cpfCnpj">
         </div>
         <div class="mb-3 mt-3">
-            <label class="form-label">e-mail:</label>
+            <label class="form-label">E-mail:</label>
             <input type="email" class="form-control" placeholder="e-mail do cliente" name="email">
         </div>
 	    <button type="submit" class="btn btn-primary">Cadastrar</button>
