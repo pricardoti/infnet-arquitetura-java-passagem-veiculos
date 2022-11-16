@@ -1,10 +1,10 @@
 package br.edu.infnet.passagemveiculos.model.domain;
 
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.Veiculo;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 
 @Entity
 public class Passagem {
@@ -12,17 +12,21 @@ public class Passagem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
     private String praca;
-    private String guiche;
     private String operador;
+    private Integer guiche;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
     private LocalDateTime dataHora;
 
-    @OneToOne(cascade = CascadeType.DETACH)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH)
     @JoinColumn(name = "idCliente")
     private Cliente cliente;
 
-    @OneToMany(cascade = CascadeType.DETACH)
-    private List<Veiculo> veiculos;
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH, optional = false)
+    @JoinColumn(name = "idVeiculo")
+    private Veiculo veiculo;
 
     public Passagem() {
         this.dataHora = LocalDateTime.now();
@@ -49,11 +53,11 @@ public class Passagem {
         this.praca = praca;
     }
 
-    public String getGuiche() {
+    public Integer getGuiche() {
         return guiche;
     }
 
-    public void setGuiche(String guiche) {
+    public void setGuiche(Integer guiche) {
         this.guiche = guiche;
     }
 
@@ -65,12 +69,28 @@ public class Passagem {
         this.operador = operador;
     }
 
-    public List<Veiculo> getVeiculos() {
-        return veiculos;
+    public Veiculo getVeiculo() {
+        return veiculo;
     }
 
-    public void setVeiculos(List<Veiculo> veiculos) {
-        this.veiculos = veiculos;
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
+
+    public LocalDateTime getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(LocalDateTime dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    public Cliente getCliente() {
+        return cliente;
+    }
+
+    public void setCliente(Cliente cliente) {
+        this.cliente = cliente;
     }
 
     @Override
@@ -82,7 +102,7 @@ public class Passagem {
                 ", operador='" + operador +
                 ", dataHora=" + dataHora +
                 ", cliente=" + cliente +
-                ", veiculos=" + veiculos.size() +
+                ", veiculos=" + veiculo +
                 ']';
     }
 }

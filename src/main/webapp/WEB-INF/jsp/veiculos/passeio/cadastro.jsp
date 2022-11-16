@@ -1,6 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-pageEncoding="ISO-8859-1"%> <%@ taglib uri="http://java.sun.com/jsp/jstl/core"
-prefix="c"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1"%> 
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
   <head>
@@ -21,6 +20,7 @@ prefix="c"%>
         <div class="mb-3 mt-3">
           <label class="form-label">Categoria:</label>
           <select class="form-select" name="categoria">
+            <option>selecione uma op&#231;&#227;o</option>
             <c:forEach var="categoria" items="${categorias}">
               <option value="${categoria}">${categoria}</option>
             </c:forEach>
