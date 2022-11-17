@@ -25,7 +25,9 @@
 
 ---
 
-Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
+1. Optei por não usar o ``@Autowired`` explicitamente, fazendo a injeção por construtor - apenas por estilo de codigicação pessoal;
+2. Optei por não usar ``@Table``, deixando a cargo do framework nomear as tabelas;
+3. Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
 
 Resovendo o problema da ``LocalDateTime``:
 ```@DateTimeFormat
