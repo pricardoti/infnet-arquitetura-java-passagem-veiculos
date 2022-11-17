@@ -36,3 +36,13 @@ Resovendo o problema da ``LocalDateTime``:
 @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
 private LocalDateTime dataHora;
 ```
+
+#### Usuario de Acesso do APP
+
+---
+
+url: http://localhost:8080/
+
+usuario/email: adm@infnet.edu.br
+
+senha: 123
