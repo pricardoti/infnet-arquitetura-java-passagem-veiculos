@@ -14,7 +14,6 @@ public class Passagem {
     private Integer id;
 
     private String praca;
-    private String operador;
     private Integer guiche;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME)
@@ -27,6 +26,10 @@ public class Passagem {
     @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.DETACH, optional = false)
     @JoinColumn(name = "idVeiculo")
     private Veiculo veiculo;
+
+    @ManyToOne
+    @JoinColumn(name = "idUsuario")
+    private Usuario usuario;
 
     public Passagem() {
         this.dataHora = LocalDateTime.now();
@@ -61,14 +64,6 @@ public class Passagem {
         this.guiche = guiche;
     }
 
-    public String getOperador() {
-        return operador;
-    }
-
-    public void setOperador(String operador) {
-        this.operador = operador;
-    }
-
     public Veiculo getVeiculo() {
         return veiculo;
     }
@@ -93,13 +88,20 @@ public class Passagem {
         this.cliente = cliente;
     }
 
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
     @Override
     public String toString() {
         return "Passagem[" +
                 "id='" + id +
                 "praca='" + praca +
                 ", guiche='" + guiche +
-                ", operador='" + operador +
                 ", dataHora=" + dataHora +
                 ", cliente=" + cliente +
                 ", veiculos=" + veiculo +

@@ -6,7 +6,7 @@ import org.springframework.boot.ApplicationRunner;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
-@Order(1)
+@Order(2)
 @Component
 public class ClienteTeste implements ApplicationRunner {
 

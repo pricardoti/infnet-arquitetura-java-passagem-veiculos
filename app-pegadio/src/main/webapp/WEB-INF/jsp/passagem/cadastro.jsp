@@ -23,10 +23,6 @@
           <input type="number" maxlength="2" class="form-control" placeholder="01" name="guiche">
         </div>
         <div class="form-group">
-          <label>Operador:</label>
-          <input type="text" class="form-control" placeholder="Joao" name="operador">
-        </div>
-        <div class="form-group">
           <label>Data Hora:</label>
           <input type="datetime-local" class="form-control" name="dataHora">
         </div>

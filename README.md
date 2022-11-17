@@ -21,13 +21,15 @@
 ./mvnw spring-boot:run
 ```
 
-#### Pontos Importantes
+#### Observações e Pontos Importantes
 
 ---
 
 1. Optei por não usar o ``@Autowired`` explicitamente, fazendo a injeção por construtor - apenas por estilo de codigicação pessoal;
 2. Optei por não usar ``@Table``, deixando a cargo do framework nomear as tabelas;
-3. Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
+3. No desenho de arquitetura o atributo **operador** passou a ser o **usuario** logado dentro da aplicação para tentar ficar mais proximo do mundo real;
+4. O **vinculo/associação** do **usuario logado** (operador) foi realizado com a entidade de **passagem**, sendo possivel reaproveitar os cadastro de **clientes** e **veiculos** para outros usuarios (operadores);
+5. Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
 
 Resovendo o problema da ``LocalDateTime``:
 ```@DateTimeFormat
