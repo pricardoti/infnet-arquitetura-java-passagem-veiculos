@@ -7,12 +7,10 @@ import br.edu.infnet.passagemveiculos.model.domain.veiculos.CategoriaEnum;
 import br.edu.infnet.passagemveiculos.model.domain.veiculos.Passeio;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
-import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 import static br.edu.infnet.passagemveiculos.model.domain.veiculos.CarroceriaEnum.PRANCHA;
 
-@Order(3)
 @Component
 public class PassagemTeste implements ApplicationRunner {
 
@@ -45,14 +43,12 @@ public class PassagemTeste implements ApplicationRunner {
         Passagem passagem1 = new Passagem(cliente1);
         passagem1.setGuiche(1);
         passagem1.setPraca("Litoral Norte SP");
-        passagem1.setOperador("Joãozinho");
         passagem1.setVeiculo(passeio1);
         System.out.println(">>> " + passagem1);
 
         Passagem passagem2 = new Passagem(cliente1);
         passagem2.setGuiche(2);
         passagem2.setPraca("Litoral Norte SP");
-        passagem2.setOperador("Mariazinha");
         passagem2.setVeiculo(passeio2);
         System.out.println(">>> " + passagem2);
 
@@ -72,7 +68,6 @@ public class PassagemTeste implements ApplicationRunner {
         Passagem passagem3 = new Passagem(cliente2);
         passagem3.setGuiche(5);
         passagem3.setPraca("Zona Sul MG");
-        passagem3.setOperador("Zezinho");
         passagem3.setVeiculo(caminhao1);
         System.out.println(">>> " + passagem3);
 

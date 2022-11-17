@@ -21,7 +21,6 @@
           <th>Id</th>
           <th>Pra&#231;a</th>
           <th>Guich&#234;</th>
-          <th>Operador</th>
           <th>Data Hora</th>
           <th>Veciulo</th>
           <th>Cliente</th>
@@ -34,7 +33,6 @@
               <td>${p.id}</td>
               <td>${p.praca}</td>
               <td>${p.guiche}</td>
-              <td>${p.operador}</td>
               <td>${localDateTimeFormat.format(p.dataHora)}</td>
               <td>${p.veiculo.placa}</td>
               <td>${p.cliente.nome}</td>

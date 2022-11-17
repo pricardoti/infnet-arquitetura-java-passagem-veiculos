@@ -15,8 +15,8 @@ public class PassagemService {
         this.passagemRepository = passagemRepository;
     }
 
-    public Collection<Passagem> obterLista() {
-        return (Collection<Passagem>) passagemRepository.findAll();
+    public Collection<Passagem> obterLista(Integer usuarioId) {
+        return passagemRepository.findByIdUsuario(usuarioId);
     }
 
     public Passagem incluir(Passagem passagem) {

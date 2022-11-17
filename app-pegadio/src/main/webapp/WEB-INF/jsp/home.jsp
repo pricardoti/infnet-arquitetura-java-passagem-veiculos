@@ -13,5 +13,12 @@
 </head>
 <body>
     <c:import url="/WEB-INF/jsp/menu.jsp"/>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>App de Pedagio</h1>      
+            <p>Realiza a gestao de passagens de veiculos de um determinado cliente em pedagios.</p>
+        </div>
+    </div>
 </body>
 </html>
