@@ -25,14 +25,13 @@ public class UsuarioController {
     }
 
     @GetMapping(value = "/usuario")
-    public String telaCadastro(@SessionAttribute("usuarioSessao") Usuario usuarioSessao) {
+    public String telaCadastro() {
         return "usuario/cadastro";
     }
 
     @PostMapping(value = "/cep")
     public String obterCep(
             Model model,
-            @SessionAttribute("usuarioSessao") Usuario usuarioSessao,
             @RequestParam String cep
     ) {
         model.addAttribute("endereco", usuarioService.obterCep(cep));
@@ -40,12 +39,9 @@ public class UsuarioController {
     }
 
     @PostMapping(value = "/usuario/incluir")
-    public String incluir(
-            Usuario usuario,
-            @SessionAttribute("usuarioSessao") Usuario usuarioSessao
-    ) {
+    public String incluir(Usuario usuario) {
         usuarioService.incluir(usuario);
-        return "redirect:/usuario/lista";
+        return "redirect:/login";
     }
 
     @GetMapping(value = "/usuario/{id_usuario}/excluir")

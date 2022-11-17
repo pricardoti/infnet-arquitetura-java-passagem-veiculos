@@ -29,7 +29,8 @@
 2. Optei por não usar ``@Table``, deixando a cargo do framework nomear as tabelas;
 3. No desenho de arquitetura o atributo **operador** passou a ser o **usuario** logado dentro da aplicação para tentar ficar mais proximo do mundo real;
 4. O **vinculo/associação** do **usuario logado** (operador) foi realizado com a entidade de **passagem**, sendo possivel reaproveitar os cadastro de **clientes** e **veiculos** para outros usuarios (operadores);
-5. Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
+5. No meu projeto após se cadastrar o usuario é direcionado para tela de **login**, ao realizar o login gera o usuario na sessão mantendo o funcionamento adequado do menu;
+6. Simplemente fazendo o binding de um atritbuto do ``LocalDateTime`` no formulario JSP, irá apresentar erro de conversão na hora de settar o valor.
 
 Resovendo o problema da ``LocalDateTime``:
 ```@DateTimeFormat
